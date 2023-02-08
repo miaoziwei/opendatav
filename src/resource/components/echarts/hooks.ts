@@ -30,7 +30,7 @@ export const useEchart = (chartEl: Ref<ElRef | undefined | null>) => {
 
   const updateEchart = (option: EchartOption) => {
     try {
-      chart?.setOption(option)
+      chart?.setOption(option, { notMerge: true })
     } catch (e) {
       console.log(e)
     }
